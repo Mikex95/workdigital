@@ -25,3 +25,27 @@ const secondHighestNumber = (array) => {
 console.log(secondHighestNumber(array1));
 console.log(secondHighestNumber(array2));
 console.log(secondHighestNumber(array3));
+
+// Challenge 2
+
+//Bitte erstelle eine Funktion, welche bei der Eingabe einer Zahl zwischen 1 und 26 den Buchstaben an der entsprechenden Stelle des Alphabets zurückgibt.
+//Wenn die Zahl nicht in diesem Bereich liegt oder keine gültige Zahl ist, dann gebe „invalid“ zurück.
+
+//letterAtPosition(1) ➞ "a"
+//letterAtPosition(26.0) ➞ "z"
+//letterAtPosition(0) ➞ "invalid"
+//letterAtPosition(4.5) ➞ "invalid"
+
+function letterAtPosition(number) {
+  const abc = "abcdefghijklmnopqrstuvwxyz";
+  if (Number.isInteger(number) && number >= 1 && number <= 26) {
+    return abc[number - 1];
+  } else {
+    return "invalid";
+  }
+}
+console.log(letterAtPosition(13)); // m
+console.log(letterAtPosition(1)); //  a
+console.log(letterAtPosition(24)); // x
+// = MAX :D
+console.log(letterAtPosition(28)); //invalid
